@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marché – Curated Goods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div>
+    <div class="logo-title">Marché</div>
+    <div class="logo-sub">Curated goods</div>
+  </div>
+  <div class="header-controls">
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a89585" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="searchInput" type="text" placeholder="Search products…" />
+    </div>
+    <select id="sortSelect">
+      <option value="default">Sort: Default</option>
+      <option value="price-asc">Price: Low → High</option>
+      <option value="price-desc">Price: High → Low</option>
+      <option value="rating">Top Rated</option>
+    </select>
+  </div>
+</header>
+
+<!-- Category filters -->
+<div class="filter-bar">
+  <button class="cat-btn active" data-cat="All">All Products</button>
+  <button class="cat-btn" data-cat="electronics">Electronics</button>
+  <button class="cat-btn" data-cat="jewelery">Jewellery</button>
+  <button class="cat-btn" data-cat="men's clothing">Men's Clothing</button>
+  <button class="cat-btn" data-cat="women's clothing">Women's Clothing</button>
+  <span id="countLabel"></span>
+</div>
+
+<!-- Product grid -->
+<div class="grid" id="grid"></div>
+
+<!-- Modal -->
+<div id="modal">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
